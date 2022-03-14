@@ -7,15 +7,15 @@ title: Fetch Interview Assignment
 ## Part 1: Building a Simulated Warehouse
 For Part 1 of this assignment, a warehouse with the layout shown in Figure 1 is to be created.
 
-| ![warehouse_layout.png](images/warehouse_layout.png) | 
-|:--:| 
-| *Figure 1: Warehouse Environment Layout* |
+![warehouse_layout.png](images/warehouse_layout.png)
+<center><h4><i>Figure 1: Warehouse Environment Layout</i></h4></center>
+
 
 Figure 2 shows a short animation of a 3D Warehouse environment created in Gazebo with the layout from Figure 1. The shelf and floor models were created in Blender and exported as `.dae` files. Then, `model.sdf` and `model.config` files were created for each of these models. Finally, all of these models were assembled into the 3D environment shown in Figure 2 using a `.world` file. All model and world files can be downloaded using the links below.
 
-| ![space-1.jpg](images/my_warehouse_empty.gif) | 
-|:--:| 
-| *Figure 2: Animation of the 3D Warehouse Environment created using Gazebo* |
+<iframe width="740" height="400" src="https://www.youtube.com/embed/rzzO0s8lRzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 2: Animation of the 3D Warehouse Environment created using Gazebo</i></h4></center>
+
 
 ## Part 2.A: Running Freight Robot Simulation on Fetch Environment
 
@@ -23,23 +23,23 @@ For this part, Fetch's Freight robot is simulated in the built-in Fetch environm
 
 First of all, the Freight robot model is started in a empty environment to verify if the robot model is being rendered properly. This is done by running the command `roslaunch fetch_gazebo simulation.launch robot:=freight`. Figure 3 shows the Freight robot in an empty environment. 
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
-|:--:| 
-| *Figure 3: Animation of the Freight robot in an empty environment* |
+<iframe width="740" height="400" src="https://www.youtube.com/embed/MO_dBMwOx8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 3: Animation of the Freight robot in an empty environment</i></h4></center>
+
 
 Now, the Freight robot can be simulated in the built-in Fetch environment. This can be done using the command `roslaunch fetch_gazebo playground.launch robot:=freight`. Figure 4 shows the synchronised Gazebo and Rviz views of the Freight robot under simulation. Rviz view shows how the Freight robot perceives the simulated world through its simulated 2D Lidar.  
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
-|:--:| 
-| *Figure 4: Synchronised Gazebo and Rviz views of the Fright robot under simulation* |
+<iframe width="740" height="400" src="https://www.youtube.com/embed/AnGpSja6Qak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 4: Synchronised Gazebo and Rviz views of the Fright robot under simulation with a 2D Lidar</i></h4></center>
+
 
 Next, the robot model is modified to include a 3D Depth Sensor. Gazebo's Depth Camera Plugin is used to create a 3D Depth Sensor and integrate it into the robot. This is done by modifying the `freight.gazebo.xacro` and `freight.urdf` files. `freight.gazebo.xacro` is used to integrate the 3D Depth Sensor into the robot at a predefined frame location, define sensor parameters and the topic names. `freight.urdf` is used to define the frame locations for the sensor. Modified `freight.gazebo.xacro` and `freight.urdf` can be found in the links below.
 
 Once the 3D Depth Sensor is integrated into the Freight Robot, it is simulated in the built-in Fetch environment once again. Figure 5 shows the synchronised Gazebo and Rviz views of the Freight robot under simulation with a 3D Depth Sensor.
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
-|:--:| 
-| *Figure 5: Synchronised Gazebo and Rviz views of the Fright robot under simulation with a 3D Depth Sensor* |
+<iframe width="740" height="400" src="https://www.youtube.com/embed/3ra6steuV4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 5: Synchronised Gazebo and Rviz views of the Fright robot under simulation with a 3D Depth Sensor</i></h4></center>
+
 
 ## Part 2.B: Recording Relevant Topics
 
@@ -113,13 +113,13 @@ For this part, the Fright robot is placed and simulated in the warehouse environ
 
 Figure 6 shows Freight robot in the warehouse environment created in Part 1. Figure 7 shows the robot moving around in this environment.
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
-|:--:| 
-| *Figure 6: Freight Robot in the Warehouse Environment created in Part 1* |
+<iframe width="740" height="400" src="https://www.youtube.com/embed/EYGr-PgB4NM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 6: Freight Robot in the Warehouse Environment created in Part 1</i></h4></center>
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
-|:--:| 
-| *Figure 7: Freight Robot moving around in the Warehouse Environment created in Part 1* |
+
+<iframe width="740" height="400" src="https://www.youtube.com/embed/FjOibs9Lni0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><h4><i>Figure 7: Freight Robot moving around in the Warehouse Environment created in Part 1</i></h4></center>
+
 
 A rosbag containing a record of the Freight robot run in this environment can be found in the link below.
 
